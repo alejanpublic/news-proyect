@@ -1,0 +1,294 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*aca configuro como se veria el header en compu*/
+
+#leftMenu #botonX{
+    display: none;
+}
+
+
+
+header{
+    background-image: url("img/img-2.jpg");
+    height: auto; /*alto*/
+    width: 100%; /*ancho*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    left: 0;
+    right: 0;
+}
+
+
+
+.logo-img{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo-img img{
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.leftMenu{
+    padding-bottom: 0px 0px 0px 10px;
+}
+
+.leftMenu h2{
+    text-decoration: none;
+    color: 	#ffbf00;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#barras{
+    display: none;
+}
+
+nav{
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+}
+
+nav a{
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover{
+    background: blue;
+}
+
+/*aca configuro como se veria en pantalla menor a 850px*/
+@media (max-width: 850px){
+    .logo-img{
+        flex-direction: column;
+    }
+
+    .logo img{
+        padding: 10px;
+        height: 7rem;
+    }
+    #leftMenu #botonX{
+        display: block;
+        font-size: 30px;
+        text-align: left;
+    }
+    #barras{
+        display:inline-block;
+        flex-direction: row;
+        font-size: 30px;
+        background: #f7f5f5;
+        /*con esto dejamos el header fijo en la parte de arriba*/
+        position: fixed;
+        /*si usamos fixied debemos agregar left y right en 0 si o si*/
+        left: 0;
+        right: 0;
+    }
+    .menu i{
+        margin: 10px;
+        color: #f7f5f5;
+    }
+    
+    #leftMenu{
+        height: 100vh;
+        position: fixied;
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+        width: 0;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background: black;
+        overflow-x: hidden;
+        transition: .5s;
+    }
+    
+    #leftNav{
+        margin-top: 70px;
+        flex-direction: column;
+    }
+    .leftNav a{
+        margin-bottom: 15px;
+    }
+    #leftMenu a{
+        padding: 8px 8px 8px 15px;
+        text-decoration: none;
+        font-size: .5rem;
+        color: #f7f5f5;
+        transition: .5s;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+
+}
+
+
+
+
+#contenido{
+    width: 70%;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px
+}
+
+.banner-contenido{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 70px;
+}
+
+.banner{
+    padding: 30px;
+    background: #f7f5f5;
+}
+
+.news{
+    height: auto;
+    flex-grow: 1; /* flex: 1 0 200px;*/
+    flex-shrink: 0;
+    flex-basis: 200px;
+}
+
+.news{
+    border-radius: 10px;
+    box-shadow: 0px 0px 7px 2px rgba(0,0,0,0.2);
+}
+
+.imagen{
+    height: 150px;
+    margin: 10px;
+}
+
+.news a{
+    text-decoration: none;
+    color: #1e1e1e;
+}
+
+.news a:hover{
+    color: #1bb8ca;
+}
+
+.news h2{
+    font-size: 1.2rem;
+    margin: 10px;
+    display: block;
+}
+
+.news h4{
+    font-size: .1 rem;
+    margin: 10px;
+    color:blue;
+}
+
+/*aca modificamos responsive*/
+
+@media(max-width: 600px){
+    .banner_contenido{
+        flex-direction: column;
+    }
+    #contenido{
+        width: 100%;
+        padding: 0;
+    }
+    .banner{
+        padding: 20px 0;
+        margin: auto;
+        background: none;
+    }
+    .news{
+        border-radius: 0;
+        box-shadow: none;
+        border-top: 1px solid #b1b1b1;
+    }
+}
+
+/*aca configuramos el footer*/
+
+footer{
+    width: 100%;
+    padding: 50px 0px;
+    background: #1e1e1e;
+
+}
+
+.container-footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: auto;
+}
+
+.box-footer{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.logo-footer img{
+    height: 70px;
+    border-radius: 50%;
+}
+
+.terminos{
+    max-width: 350px;
+    margin-top: 20px;
+    font-weight: 500;
+    color: #7a7a7a;
+    font-size: 18px;
+}
+
+.box-footer{
+    margin-bottom: 30px;
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.box-footer a{
+    margin-top: 10px;
+    color: #7a7a7a;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.box-footer a:hover{
+    opacity: 0.8;
+}
+
+a i{
+    padding: 10px;
+}
+
+.box-copyright{
+    max-width: 800px;
+    text-align: center;
+    margin: auto;
+    padding: 0px 40px;
+}
+
+.box-copyright p{
+    margin-top: 20px;
+    color: #7a7a7a;
+}
+
+.box-copyright hr{
+    background: #7a7a7a;
+
+}
